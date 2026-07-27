@@ -802,6 +802,6 @@ Artificial intelligence tools may be used as learning assistants, but students m
 
 # Instructor
 
-**Rodrigo Gualtero**  
+**DOSW Teachers** 
 Software Development and Operations — DOSW  
 `rodrigo.gualtero-m@escuelaing.edu.co`
