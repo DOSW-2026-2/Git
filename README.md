@@ -7,7 +7,7 @@ Collaborative Git, GitHub, and functional programming lab in Java featuring bran
 **Institution:** Escuela Colombiana de Ingeniería Julio Garavito  
 **Semester:** 2026-2  
 **Language:** Java  
-**Work mode:** Pairs  
+**Work mode:** 2 or 3 students (Except DOWS-4 -> pairs) 
 **Estimated duration:** 2 hours and 30 minutes  
 
 ---
@@ -50,20 +50,41 @@ By the end of this laboratory, students should be able to:
 
 ---
 
+# Part 0 — Onboarding
+
+**Weight: 5%**
+
+## 1. Resume (CV)
+
+Participation of each team member in Teams by responding to the Resume post.
+
+## 2. Teamwork agreements
+
+Each team must define teamwork agreements, meaning the rules they will use to work together during the semester:
+
+- What times will you meet?
+- What will your communication channels be: Teams, WhatsApp, Slack...?
+- How often will you meet?
+- If a conflict were to arise, how could you resolve it?
+
+Write down your agreements and have them ready, as they will be revisited in later parts of this lab.
+
+---
+
 # Part 1 — Repository Setup and Preparation
 
-**Weight: 30%**
+**Weight: 25%**
 
 ## 1. GitHub Account
 
 Each student must have a GitHub account.
 
-- If you already have an account, connect it to your institutional email.
+- If you already have an account, connect it to your institutional email ([steps](https://docs.github.com/es/account-and-profile/how-tos/email-preferences/adding-an-email-address-to-your-github-account)).
 - If you do not have one, create it before starting the laboratory.
 
 ## 2. Repository Creation
 
-Create one repository per pair using the following format:
+Create one repository per team using the following format:
 
 ```text
 DOSW_Lab1_LastNameStudent1_LastNameStudent2
@@ -75,13 +96,11 @@ Example:
 DOSW_Lab1_Gualtero_Martinez
 ```
 
-The repository must contain a maximum of two student last names.
-
 ## 3. Add Collaborators
 
 Add the following people as collaborators:
 
-- Your teammate.
+- Your teammates.
 - The course instructor.
 
 Send the repository URL to the instructor through Microsoft Teams.
@@ -159,20 +178,34 @@ Laboratory1/
 │   └── Challenge6.java
 └── README.md
 ```
-
-The `README.md` must contain:
-
-- Team members.
-- Challenge evidence.
-- Technical explanations.
-- Answers to the conceptual questionnaire.
-
-Commit and push the initial structure:
+That team member must upload these changes to the branch:
 
 ```bash
 git add .
-git commit -m "chore: create initial laboratory structure"
-git push -u origin feature/LastNameFirstName_2026-2
+git commit -m “<Add a short comment describing the change you made>”
+git push url repositorio
+```
+
+Another team member should generate the `README.md` file with the following content:
+
+- Team members.
+- Challenge evidence (At this point, only the title. In the next parts, you'll fill out the evidences).
+- Technical explanations (At this point, only the title. In the next parts, you'll fill out the explanations).
+- Answers to the conceptual questionnaire (At this point, only the title. In the next parts, you'll fill out the questionnaire).
+
+That team member must upload these changes to the branch:
+
+```bash
+git add .
+git commit -m “<Add a short comment describing the change you made>”
+git push url repositorio
+```
+Merge your repository structure and `README.md` file from your personal branches into `develop`.
+
+```bash
+git checkout develop
+git pull
+git merge feature/GualteroRodrigo_2026-2
 ```
 
 ## 9. README Evidence Format
@@ -218,7 +251,7 @@ For each challenge:
 feature/challenge_N_LastNameFirstName_2026-2
 ```
 
-2. Both students must contribute commits.
+2. All students must contribute commits.
 3. Each challenge must include evidence in `README.md`.
 4. After completing a challenge, create a final commit:
 
@@ -226,10 +259,9 @@ feature/challenge_N_LastNameFirstName_2026-2
 git commit -m "feat: challenge N completed"
 ```
 
-5. Ask the instructor to validate the execution.
-6. Merge the completed challenge branch into `develop`.
-7. Preserve the branch history.
-8. All programming challenges must be implemented in Java.
+5. Merge the completed challenge branch into `develop`.
+6. Preserve the branch history.
+7. All programming challenges must be implemented in Java.
 
 ---
 
@@ -637,18 +669,19 @@ Add all answers to the `README.md`.
 
 ## Questions
 
-1. What is the difference between `git merge` and `git rebase`?
-2. What happens when two branches modify the same line of a file?
-3. How can you display the branch and merge history graphically in the terminal?
-4. What is the difference between a commit and a push?
-5. What are `git stash` and `git stash pop` used for?
-6. What is the difference between `HashMap` and `Hashtable`?
-7. What advantages does `Collectors.toMap()` provide over a traditional loop?
-8. When using `stream().map()` on a list of objects, what type of operation is being performed?
-9. What does `stream().filter()` do, and what does it return?
-10. Describe the steps required to create a new feature branch from `develop`.
-11. What is the difference between `git branch` and `git checkout -b`?
-12. Why should new functionality be developed in `feature/*` branches instead of directly in `main`?
+1. Team agreements: Add the agreements you defined in the Onboarding section here.
+2. What is the difference between `git merge` and `git rebase`?
+3. What happens when two branches modify the same line of a file?
+4. How can you display the branch and merge history graphically in the terminal?
+5. What is the difference between a commit and a push?
+6. What are `git stash` and `git stash pop` used for?
+7. What is the difference between `HashMap` and `Hashtable`?
+8. What advantages does `Collectors.toMap()` provide over a traditional loop?
+9. When using `stream().map()` on a list of objects, what type of operation is being performed?
+10. What does `stream().filter()` do, and what does it return?
+11. Describe the steps required to create a new feature branch from `develop`.
+12. What is the difference between `git branch` and `git checkout -b`?
+13. Why should new functionality be developed in `feature/*` branches instead of directly in `main`?
 
 ---
 
@@ -768,7 +801,8 @@ Before submitting, verify that:
 
 | Component | Weight |
 |---|---:|
-| Repository setup and preparation | 30% |
+| Onboarding | 5% |
+| Repository setup and preparation | 25% |
 | Express Hackathon challenges | 60% |
 | Conceptual questionnaire | 10% |
 | **Total** | **100%** |
@@ -797,6 +831,7 @@ Artificial intelligence tools may be used as learning assistants, but students m
 |---|---|---|
 | Student 1 |  |  |
 | Student 2 |  |  |
+| Student 3 (Only DOSW-1, DOSW-2 and DOSW-3) |  |  |
 
 ---
 
@@ -804,4 +839,5 @@ Artificial intelligence tools may be used as learning assistants, but students m
 
 **DOSW Teachers** 
 Software Development and Operations — DOSW  
+`laura.herrera@escuelaing.edu.co`
 `rodrigo.gualtero-m@escuelaing.edu.co`
